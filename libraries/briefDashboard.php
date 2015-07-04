@@ -16,6 +16,22 @@ if(!current_user_can('manage_options')){
 }
 
 ?>
+
+<script>
+	
+function brifIframeRezise(){
+  var body = jQuery("#wpbody").height();
+  var iframe = jQuery("#briefform").height();
+
+  if(iframe != body){
+    jQuery("#briefform").css({"height": (body+100)+"px"});
+  }
+
+  //setTimeout(brifIframeRezise, 500); //at 500 miliseconds   
+}
+
+setTimeout(brifIframeRezise, 500); //at 500 miliseconds
+</script>
 <div class="wrap">
 
 	<h2 style="margin-bottom: 30px;">Brand Info</h2>
